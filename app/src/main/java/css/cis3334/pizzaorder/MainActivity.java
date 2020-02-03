@@ -26,20 +26,27 @@ public class MainActivity extends AppCompatActivity implements updateViewInterfa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        pizzaOrderSystem = new PizzaOrder(view this);
+
         // Set up our radio buttons
         rbSmall = (RadioButton) findViewById(R.id.radioButtonSmall);
         rbMedium = (RadioButton) findViewById(R.id.radioButtonMedium);
         rbLarge = (RadioButton) findViewById(R.id.radioButtonLarge);
 
-        // Set up the Check Boxes
+        rbSmall.append("-- Price: $"+ pizzaOrderSystem.getPrice(Pizza.pizzaSize.SMALL));
+        rbMedium.append("-- Price: $"+ pizzaOrderSystem.getPrice(Pizza.pizzaSize.MEDIUM));
+        rbLarge.append("-- Price: $"+ pizzaOrderSystem.getPrice(Pizza.pizzaSize.LARGE));
+
+
         chkbxCheese = (CheckBox) findViewById(R.id.checkBoxCheese);
         chkbxDelivery = (CheckBox) findViewById(R.id.checkBoxDeluvery);
 
-        // Set up the TextViews
+
         txtTotal = (TextView) findViewById(R.id.textViewTotal);
         txtStatus = (TextView) findViewById(R.id.textViewStatus);
         txtPizzasOrdered = (TextView) findViewById(R.id.textViewPizzasOrdered);
-        // Set up the Spinner
+
         spinnerToppings = (Spinner) findViewById(R.id.spinnerToppings);
 
     }
