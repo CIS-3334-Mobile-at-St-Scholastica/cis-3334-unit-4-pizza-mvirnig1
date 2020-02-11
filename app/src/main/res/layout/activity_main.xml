@@ -20,21 +20,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/radioButtonSmall"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:onClick="onClickOrder"/>
 
         <RadioButton
             android:text="@string/mediumpizza"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/radioButtonMedium"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:onClick="onClickOrder"/>
 
         <RadioButton
             android:text="@string/large_pizza"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/radioButtonLarge"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:onClick="onClickOrder"/>
 
     </RadioGroup>
 
@@ -49,7 +52,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/checkBoxCheese"
-        android:layout_marginTop="12dp" />
+        android:layout_marginTop="12dp"
+        android:onClick="onClickOrder"/>
 
     <Button
         android:text="Order"

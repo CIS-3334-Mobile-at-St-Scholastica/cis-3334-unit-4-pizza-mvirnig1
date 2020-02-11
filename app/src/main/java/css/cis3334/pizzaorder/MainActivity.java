@@ -63,6 +63,8 @@ public class MainActivity extends AppCompatActivity implements updateViewInterfa
         // ****** For the Assignment, students need to add code here to get information from the UI widgets...
 
         String orderDescription = spinnerToppings.getSelectedItem().toString();
+        pizzaOrderSystem.setDelivery(chkbxDelivery.isChecked());
+
 
         // ****** For the Practice Activity, students need to call to OrderPizza here
         // ****** For the Assignment, students will modify the order to fit the type of pizza the user selects using the UI widgets
